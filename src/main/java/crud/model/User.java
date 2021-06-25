@@ -27,7 +27,7 @@ public class User implements UserDetails {
 
     @ManyToMany
     @JoinTable(name = "usersjm_roles",
-            joinColumns = @JoinColumn(name = "users_jm_id"),
+            joinColumns = @JoinColumn(name = "usersjm_id"),
             inverseJoinColumns = @JoinColumn(name = "roles_id"))
     private Set<Role> roles;
 

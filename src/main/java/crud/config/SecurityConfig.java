@@ -38,7 +38,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll();
 
         http.logout()
-
                 .permitAll()
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
                 .logoutSuccessUrl("/")
@@ -50,9 +49,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/user").hasAnyAuthority("USER", "ADMIN")
                 .antMatchers("/adduser").hasAuthority("ADMIN")
                 .antMatchers("/update-user").hasAuthority("ADMIN")
-                .antMatchers("/admin").hasAuthority("ADMIN")
-        ;
-
+                .antMatchers("/admin").hasAuthority("ADMIN");
     }
 
     @Override
