@@ -15,7 +15,7 @@ import java.util.List;
 
 @Service
 @Transactional
-public class ServiceDB implements UserDetailsService {
+public class ServiceDB implements UserDetailsService, UserService {
     private UserDAO userDAO;
 
     @Autowired

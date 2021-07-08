@@ -1,7 +1,7 @@
 package crud.config;
 
 
-import crud.config.lodin.LoginSuccessHandler;
+import crud.config.login.LoginSuccessHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;

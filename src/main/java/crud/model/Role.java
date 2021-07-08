@@ -1,5 +1,6 @@
 package crud.model;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;

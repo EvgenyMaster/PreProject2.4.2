@@ -1,4 +1,4 @@
-package crud.config.lodin;
+package crud.config.login;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.authority.AuthorityUtils;

@@ -1,4 +1,4 @@
-package crud.sevlet;
+package crud.conrollers;
 
 
 import crud.model.Role;
@@ -50,7 +50,7 @@ public class UsersController {
     @PostMapping("/adduser")
     public String saveAddingUser(@RequestParam("name") String name,
                                  @RequestParam("email") String email,
-                                 @RequestParam("password") String password,
+                                 @RequestParam("password") String pass,
                                  @RequestParam(required = false, name = "ADMIN") String ADMIN,
                                  @RequestParam(required = false, name = "USER") String USER) {
 
@@ -65,7 +65,7 @@ public class UsersController {
             roles.add(new Role(1L, USER));
         }
 
-        User user = new User(name, email, password, roles);
+        User user = new User(name, email, pass, roles);
         serviceDb.insertUser(user);
 
         return "adminPage";

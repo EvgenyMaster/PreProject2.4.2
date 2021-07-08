@@ -2,15 +2,14 @@ package crud.dao;
 
 import crud.model.User;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.*;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.util.Arrays;
 import java.util.List;
 
 @Repository
-@Transactional
-public class UserDaoHibernate implements UserDAO{
+public class UserDaoHibernate implements UserDAO {
 
     @PersistenceContext
     private EntityManager entityManager;
